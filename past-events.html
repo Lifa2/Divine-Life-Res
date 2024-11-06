@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Events - Divine Life Restoration Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-c3Fl2tgsBjhF+1nKDZ06qR7jeN8C/N2PtQnivEsFp8y7T3gDYOglc8xYSMygIGrHHJXkth20zWsvNUyV2Tb9Tw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-YYA7L6M6z6P4zEbz2sURy7zS5pO1FQzwQhYZoUby7lRzCg8z/4Q0eXtS1kA00vL+QUHokOYXjFTkuTqKRFo+w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="scrips.js"></script>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+        .event {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .event-content {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start; /* Align text and image to the top */
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .event-content img {
+            width: 45%;
+            border-radius: 10px;
+        }
+        .event-content-text {
+            width: 50%;
+            padding-right: 20px; /* Add some space between text and image */
+        }
+        .event-content h3 {
+            font-size: 2rem;
+            color: #555;
+        }
+        .event-content p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+        .view-gallery-btn {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .view-gallery-btn:hover {
+            background-color: #555;
+        }
+        .slideshow-container {
+            position: relative; /* Change from absolute to relative */
+            width: 100%; /* Ensure it takes full width */
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: none; /* Initially hidden */
+            z-index: 10; /* Ensure it stays above other elements */
+        }
+        .slides {
+            display: none; /* Keep individual slides hidden until shown */
+            width: 100%; /* Make sure it takes full width */
+            border-radius: 10px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Screenshot (116).png" alt="Divine Life Restoration Centre" class="logo-image">
+            <h1>Divine Life Restoration Centre</h1>
+        </div>
+        <nav>
+            <div class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-bars"></i></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-submenu">
+                        <a href="#vision-mission">Who We Are <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="index.html#vision">Vision</a>
+                            <a href="index.html#mission">Mission</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="branches.html">Branches <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="branches.html">Queenstown</a>
+                            <a href="branches.html">Whittlesea</a>
+                            <a href="branches.html">Lady Frere</a>
+                            <a href="branches.html">Thornhill</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="events.html">Ministries <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="events.html#past-events">Men's Conference</a>
+                            <a href="events.html#past-events">uBuhle Benzwakazi</a>
+                            <a href="youth.html">Youth Fellowship</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="events.html">Events <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="events.html#past-events">Past Events</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="missions.html">Missions <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="#">uBuhle Benzwakazi</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="resources.html">Resources <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="sermons.html">Sermons</a>
+                            <a href="articles.html">Articles</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="messages.html">Messages <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="messages.html#latest-messages">Latest Messages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="give.html">Give</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="section-header">
+                <h2 data-aos="fade-up">Past Events</h2>
+            </div>
+            <div class="event" data-aos="fade-up" data-aos-duration="1500">
+                <div class="event-content">
+                    <div class="event-content-text">
+                        <h3>Sabata Dalindyebo and Victoria Park Crusade</h3>
+                        <p>The Sabata Dalindyebo and Victoria Park Crusade was a great success. We gathered together to worship and share the message of hope and faith.</p>
+                        <a href="#" class="view-gallery-btn" onclick="openSlideshow(0)">View Gallery</a>
+                    </div>
+                    <img src="WhatsApp Image 2024-06-28 at 16.12.51.jpeg" alt="Sabata Dalindyebo and Victoria Park Crusade">
+                </div>
+                <div class="slideshow-container" id="slideshow-0">
+                    <div class="slides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="WhatsApp Image 2024-07-01 at 20.28.08.jpeg" style="width:30%">
+                    </div>
+                    <div class="slides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="WhatsApp Image 2024-07-16 at 23.09.59.jpeg" style="width:30%">
+                    </div>
+                    <div class="slides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="event1_slide3.jpg" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                </div>
+            </div>
+            <div class="event" data-aos="fade-up" data-aos-duration="1500">
+                <div class="event-content">
+                    <div class="event-content-text">
+                        <h3>Youth Fellowship Gathering</h3>
+                        <p>This gathering was aimed at empowering the youth and fostering a sense of community among young people in our church.</p>
+                        <a href="#" class="view-gallery-btn" onclick="openSlideshow(1)">View Gallery</a>
+                    </div>
+                    <img src="438221647_7634052899973490_8710946535140608419_n.jpg" alt="Youth Fellowship Gathering">
+                </div>
+                <div class="slideshow-container" id="slideshow-1">
+                    <div class="slides fade">
+                        <div class="numbertext">1 / 2</div>
+                        <img src="event2_slide1.jpg" style="width:100%">
+                    </div>
+                    <div class="slides fade">
+                        <div class="numbertext">2 / 2</div>
+                        <img src="event2_slide2.jpg" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Divine Life Restoration Centre. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let slideIndex = [0, 0]; // Array to hold slide indexes for multiple slideshows
+        let slideshows = document.getElementsByClassName("slideshow-container");
+
+        function openSlideshow(n) {
+            slideshows[n].style.display = "block";
+            showSlides(1, n);
+        }
+
+        function closeSlideshow(n) {
+            slideshows[n].style.display = "none";
+        }
+
+        function plusSlides(n, slideshowIndex) {
+            showSlides(slideIndex[slideshowIndex] += n, slideshowIndex);
+        }
+
+        function showSlides(n, slideshowIndex) {
+            let i;
+            let slides = slideshows[slideshowIndex].getElementsByClassName("slides");
+            if (n > slides.length) { slideIndex[slideshowIndex] = 1; }
+            if (n < 1) { slideIndex[slideshowIndex] = slides.length; }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex[slideshowIndex] - 1].style.display = "block";  
+        }
+    </script>
+</body>
+</html>

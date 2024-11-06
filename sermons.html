@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sermons - Divine Life Restoration Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header {
+            background: linear-gradient(to right, #4B0082, #FFD700);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-family: 'Royal', serif;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .logo-image {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .logo-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo h1 {
+            font-family: 'Royal', serif;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .main-menu {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .main-menu li {
+            margin: 0 15px;
+        }
+
+        .main-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .main-menu a:hover {
+            color: #ffd700;
+        }
+
+        .sermon-section {
+            padding: 50px 20px;
+            background: #f2f2f2;
+            color: #333;
+            text-align: center;
+        }
+
+        .sermon-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .sermon-container iframe {
+            width: 100%;
+            max-width: 360px;
+            height: 200px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sermon-container h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .view-all-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4B0082;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .view-all-btn:hover {
+            background-color: #FFD700;
+            color: #4B0082;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Screenshot (116).png" alt="Divine Life Restoration Centre" class="logo-image">
+            <h1>Divine Life Restoration Centre</h1>
+        </div>
+        <nav>
+            <nav>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-bars"></i></a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-submenu">
+                            <a href="#vision-mission">Who We Are <i class="fa fa-caret-right"></i></a>
+                            <div class="dropdown-submenu-content">
+                                <a href="index.html#vision">Vision</a>
+                                <a href="index.html#mission">Mission</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="branches.html">Branches <i class="fa fa-caret-right"></i></a>
+                            <div class="dropdown-submenu-content">
+                                <a href="branches.html">Queenstown</a>
+                                <a href="branches.html">Whittlesea</a>
+                                <a href="branches.html">Lady Frere</a>
+                                <a href="branches.html">Thornhill</a>
+                        </div>
+        
+                        </div>
+                        <div class="dropdown-submenu">
+                        <a href="events.html">Ministries <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="events.html#past-events">Men's Conference</a>
+                            <a href="events.html#past-events">uBuhke Benzwakazi</a>
+                            <a href="youth.html">Youth Fellowship</a>
+                        </div>
+                    </div>
+                          
+                        <div class="dropdown-submenu">
+                          <a href="events.html">Events <i class="fa fa-caret-right"></i></a>
+                            <div class="dropdown-submenu-content">
+                               
+                                <a href="past-events.html">Past Events</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="missions.html">Missions <i class="fa fa-caret-right"></i></a>
+                            <div class="dropdown-submenu-content">
+                                <a href="#">uBuhle Benzwakazi</a>
+                        </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="resources.html">Resources <i class="fa fa-caret-right"></i></a>
+                            <div class="dropdown-submenu-content">
+                                <a href="sermons.html">Sermons</a>
+                                <a href="articles.html">Articles</a>
+                            </div>
+                        </div>
+                        <div class="dropdown-submenu">
+                            <a href="messages.html">Messages <i class="fa fa-caret-right"></i></a>
+                            <div class="dropdown-submenu-content">
+                                <a href="messages.html#latest-messages">Latest Messages</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <ul class="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="youth.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="sermon-section">
+            <h2>Latest Sermons</h2>
+            <div class="sermon-container">
+                <!-- Video 1 -->
+                <iframe src="https://www.youtube.com/embed/Cx2ocbHQTX4?si=npUGQ2NEC9cFVuzd" allowfullscreen></iframe>
+                <!-- Video 2 -->
+                <iframe src="https://www.youtube.com/embed/HYWvkHDkl2c?si=7NK-6NvMYP3QlykY" allowfullscreen></iframe>
+                <!-- Video 3 -->
+                <iframe src="https://www.youtube.com/embed/O-Cy9EsE56M?si=5m7ot6UHD48kCuuU" allowfullscreen></iframe>
+            </div>
+            <a href="https://www.youtube.com/@divinetv5239/streams" class="view-all-btn" target="_blank">View All</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Divine Life Restoration Centre | Designed by Lifa Gomomo</p>
+       
+        <div class="footer-social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/27680689634" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

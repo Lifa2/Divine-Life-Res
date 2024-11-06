@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Fellowship - Divine Life Restoration Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.0/css/lightgallery.min.css">
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to right, #4B0082, #FFD700);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-family: 'Royal', serif;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .main-menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .main-menu li {
+            margin: 0 10px;
+        }
+
+        .main-menu li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .main-menu li a:hover {
+            background: rgba(255, 215, 0, 0.3);
+            border-radius: 5px;
+            transform: scale(1.05);
+        }
+
+        .newsletter {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            line-height: 1.6;
+            overflow: hidden;
+        }
+
+        .newsletter h2 {
+            font-size: 2rem;
+            color: #4B0082;
+            margin-bottom: 20px;
+        }
+
+        .newsletter p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .newsletter ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .newsletter ul li {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .newsletter h3 {
+            font-size: 1.5rem;
+            color: #4B0082;
+            margin-bottom: 15px;
+        }
+
+        .newsletter .highlight {
+            background-color: #FFD700;
+            padding: 5px 10px;
+            color: #4B0082;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .newsletter .video {
+            margin-bottom: 20px;
+        }
+
+        .content-image {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .content-image img {
+            width: 25%;
+            border-radius: 8px;
+            margin-right: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .gallery a {
+            width: calc(33.333% - 10px);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery a img {
+            width: 10%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery a:hover {
+            transform: scale(1.05);
+        }
+
+        /* Add AOS animations */
+        [data-aos] {
+            opacity: 0;
+            transition-property: transform, opacity;
+        }
+
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        [data-aos="fade-up"] {
+            transform: translate3d(0, 50px, 0);
+        }
+
+        [data-aos="fade-up"].aos-animate {
+            transform: translate3d(0, 0, 0);
+        }
+        .swiper-container {
+      width: 60%;
+      height: 60%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-slide img {
+      display: block;
+      width: 60%;
+      height: auto;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Screenshot (116).png" alt="Divine Life Restoration Centre">
+            <h1>Divine Life Restoration Centre</h1>
+        </div>
+        <nav>
+            <div class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-bars"></i></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-submenu">
+                        <a href="#vision-mission">Who We Are <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="index.html#vision">Vision</a>
+                            <a href="index.html#mission">Mission</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="branches.html">Branches <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="branches.html">Queenstown</a>
+                            <a href="branches.html">Whittlesea</a>
+                            <a href="branches.html">Lady Frere</a>
+                            <a href="branches.html">Thornhill</a>
+                    </div>
+    
+                    </div>
+                    <div class="dropdown-submenu">
+                    <a href="events.html">Ministries <i class="fa fa-caret-right"></i></a>
+                    <div class="dropdown-submenu-content">
+                        <a href="events.html#past-events">Men's Conference</a>
+                        <a href="events.html#past-events">uBuhke Benzwakazi</a>
+                        <a href="youth.html">Youth Fellowship</a>
+                    </div>
+                </div>
+                      
+                    <div class="dropdown-submenu">
+                      <a href="events.html">Events <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                           
+                            <a href="events.html#past-events">Past Events</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="missions.html">Missions <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="#">uBuhle Benzwakazi</a>
+                    </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="resources.html">Resources <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="sermons.html">Sermons</a>
+                            <a href="articles.html">Articles</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="messages.html">Messages <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="messages.html#latest-messages">Latest Messages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="give.html">Give</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="newsletter" data-aos="fade-up">
+            <div class="content-image" data-aos="fade-up">
+                <img src="438221647_7634052899973490_8710946535140608419_n.jpg" alt="Kanya Qwalela">
+                <div>
+                    <h2>Kanya Qwalela - Youth Fellowship Leader</h2>
+                    <p><i>"Empowering Young Lives for Christ"</i></p>
+                    <p>Our Youth Fellowship at Divine Life Restoration Centre is a vibrant community of young people dedicated to growing in faith, building meaningful relationships, and deepening their knowledge of Christ.</p>
+                </div>
+            </div>
+            <div data-aos="fade-up">
+                <h3>Mission:</h3>
+                <p>To create a safe and supportive environment where youth can deepen their relationship with God, develop leadership skills, and serve the church.</p>
+            </div>
+            <div data-aos="fade-up">
+                <h3>Activities:</h3>
+                <ul>
+                    <li>Weekly meetings on Saturdays for Bible study, games, and discussions</li>
+                    <li>Monthly outreach events like Street Evangelism</li>
+                    <li>Small groups for mentorship and accountability</li>
+                    <li>Special events such as Pyjama Night for Girls and Movie Night for all youth and teenagers</li>
+                    <li>Bible studies and recreational games throughout the year</li>
+                </ul>
+            </div>
+            <div data-aos="fade-up">
+                <h3>Goals:</h3>
+                <ul>
+                    <li>To help youth develop a strong foundation in their faith</li>
+                    <li>To provide a supportive community for spiritual growth and encouragement</li>
+                    <li>To equip youth with leadership skills and opportunities for service</li>
+                    <li>To foster meaningful relationships and friendships</li>
+                </ul>
+                <p>Let's build a strong and vibrant youth community that honors God and makes a difference in the world.</p>
+            </div>
+            <div class="content-image" data-aos="fade-up">
+                <img src="WhatsApp Image 2024-07-16 at 23.10.03.jpeg" alt="Prophet L. Mahashe">
+                <div>
+                    <h3>Prophet L. Mahashe (White Horse)</h3>
+                    <p>Prophet L. Mahashe was ministering and preaching to the youth and everyone on where God should raise defenders of the Gospel. His powerful message encouraged the youth to stand firm in their faith and become bold advocates for Christ in their communities.</p>
+                </div>
+            </div>
+            <div class="content-image" data-aos="fade-up">
+                <img src="WhatsApp Image 2024-07-16 at 23.10.07.jpeg" alt="Pastor L. Tsengiwe">
+                <div>
+                    <h3>Pastor L. Tsengiwe</h3>
+                    <p>Pastor L. Tsengiwe also preached and addressed the youth and everyone, emphasizing the importance of living a life dedicated to Christ. His inspiring words motivated the youth to pursue a deeper relationship with God and to serve others with love and compassion.</p>
+                </div>
+            </div>
+            <div class="content-image" data-aos="fade-up">
+                <div>
+                    <h3>Career Exhibition & Graduation Celebration</h3>
+                    <p>During the Youth Seminar 2024, we hosted an inspiring Career Exhibition and Graduation Celebration, honoring both recent graduates and established professionals. This event provided a platform for networking, mentorship, and career guidance.</p>
+                    <p>Young graduates were celebrated for their achievements and encouraged to pursue their career aspirations with faith and diligence. Seasoned professionals shared their journeys and insights, inspiring the youth to excel in their chosen fields while remaining steadfast in their faith.</p>
+                    <p>The exhibition featured interactive booths, workshops, and panel discussions covering various industries, from business and technology to healthcare and arts. It was a vibrant display of talent, ambition, and God's guidance in shaping future leaders.</p>
+                </div>
+                <img src="WhatsApp Image 2024-07-17 at 14.31.07 (2).jpeg" alt="Career Exhibition" style="width: 25%; border-radius: 8px;">
+            </div>
+            <div class="content-image" data-aos="fade-up">
+                <div>
+                    <h3>Inspirational Guest Speakers</h3>
+                    <p>We were honored to have four distinguished guest speakers who shared their wisdom and insights on the importance of education, inspiring both young people and graduates to pursue their academic and career goals with determination and faith.</p>
+                </div>
+                <img src="guest_speakers.jpg" alt="Guest Speakers" style="width: 25%; border-radius: 8px;">
+            </div>
+            
+            <div class="content-image" data-aos="fade-up">
+                <img src="WhatsApp Image 2024-07-17 at 14.19.00.jpeg" alt="Mrs Godana" style="width: 25%; border-radius: 8px;">
+                <div>
+                    <h3>Mrs. Godana - Department of Education</h3>
+                    <p>Mrs. Godana emphasized the critical role of education in personal and community development. She encouraged the youth to strive for excellence in their studies and to see education as a powerful tool for change. Her insights underscored the value of lifelong learning and perseverance.</p>
+                </div>
+            </div>
+            
+            <div class="content-image" data-aos="fade-up">
+                <img src="WhatsApp Image 2024-07-17 at 14.19.00 (1).jpeg" alt="Mrs Mpongoshe" style="width: 25%; border-radius: 8px;">
+                <div>
+                    <h3>Mrs. Mpongoshe - Ikhala TVET College</h3>
+                    <p>Mrs. Mpongoshe highlighted the opportunities available through technical and vocational education. She shared success stories of students who transformed their lives through skills training and urged the youth to explore diverse educational pathways. Her message was one of hope and practical action.</p>
+                </div>
+            </div>
+            
+            <div class="content-image" data-aos="fade-up">
+                <img src="WhatsApp Image 2024-07-17 at 14.18.58.jpeg" alt="Mrs Mosoang" style="width: 25%; border-radius: 8px;">
+                <div>
+                    <h3>Mrs. Mosoang - Walter Sisulu University</h3>
+                    <p>Mrs. Mosoang spoke about the transformative power of higher education. She encouraged students to embrace university life with enthusiasm and to leverage the resources available for their growth. Her words inspired a vision of academic success and community impact.</p>
+                </div>
+            </div>
+            
+            <div class="content-image" data-aos="fade-up">
+                <img src="WhatsApp Image 2024-07-17 at 14.18.59.jpeg" alt="Miss Nangamso Anam Nganeka" style="width: 25%; border-radius: 8px;">
+                <div>
+                    <h3>Miss Nangamso Anam Nganeka</h3>
+                    <p>Miss Nangamso Anam Nganeka delivered a passionate speech on the importance of resilience and hard work in achieving educational goals. She shared her personal journey and motivated the youth to pursue their dreams despite challenges. Her story was a testament to determination and faith.</p>
+                </div>
+            </div>
+            
+            <div data-aos="fade-up">
+        <h3>Join Us:</h3>
+        <p>Are you a young person looking for a community that supports and challenges you to grow in your faith? Join us every Saturday for our weekly Youth Fellowship meetings. We look forward to welcoming you!</p>
+    </div>
+    <div class="video" data-aos="fade-up">
+        <h3>Youth Seminar 2024</h3>
+        <p>A brief description of the Youth Seminar 2024 that took place from June 14th to June 16th, 2024. The Rising Army.</p>
+        <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="WhatsApp Image 2024-06-28 at 01.26.45.jpeg" alt="Youth Seminar 2024 Photo"></div>
+    
+      <div class="swiper-slide"><img src="WhatsApp Image 2024-07-16 at 23.10.00 (1).jpeg" alt="Youth Seminar Photo 2"></div>
+      <div class="swiper-slide"><img src="WhatsApp Image 2024-07-16 at 23.09.59.jpeg" alt="Youth Seminar Photo 3"></div>
+      <div class="swiper-slide"><img src="WhatsApp Image 2024-07-16 at 23.10.00.jpeg" alt="Youth Seminar Photo 4"></div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  </div>
+  </div>
+             
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.0/lightgallery.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.0/plugins/zoom/lg-zoom.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.0/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init();
+
+        lightGallery(document.querySelector('.gallery'), {
+            plugins: [lgZoom, lgThumbnail],
+            speed: 500,
+            thumbnail: true,
+        });
+
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+      <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: Divineliferestorationcentre@gmail.com</p>
+                <p>Phone: 071 764 8634</p>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/27680689634" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+        </div>
+        <p>&copy; 2024 Divine Life Restoration Centre|Designed by Lifa Gomomo.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+

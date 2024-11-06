@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branches - Divine Life Restoration Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Roboto Font -->
+    <style>
+        /* Resetting default styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif; /* Applying Roboto font */
+            background-color: #f4f4f4; /* Light background color for body */
+        }
+
+        /* Header styles */
+        header {
+            background: linear-gradient(to right, #4B0082, #FFD700);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-family: 'Royal', serif; /* Apply the Royal font */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            margin: 0;
+            font-size: 26px; /* Adjust font size */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .main-menu {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .main-menu li {
+            margin: 0 15px;
+        }
+
+        .main-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+            padding: 5px 10px; /* Added padding for better click area */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        .main-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+            color: #ffd700;
+        }
+
+        /* Main content */
+        .ministry-section {
+            padding: 50px 20px;
+            background-color: #d3d3d3; /* Light grey background */
+            color: #333; /* Softer dark grey for better readability */
+            text-align: center;
+            position: relative; /* For positioning content */
+        }
+
+        .ministry-section h2 {
+            font-size: 2.5rem; /* Increase heading size */
+            margin-bottom: 20px; /* Spacing below heading */
+            color: #4B0082; /* Heading color to match the header */
+        }
+
+        .ministry-content {
+            margin-top: 20px;
+            padding: 0 20px; /* Padding for better layout */
+            max-width: 800px; /* Limit width for better readability */
+            margin-left: auto; /* Center content */
+            margin-right: auto; /* Center content */
+        }
+
+        .ministry {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 15px;
+        }
+
+        .ministry-image {
+            flex: 0 0 100px; /* Fixed width for images */
+            margin-right: 15px; /* Spacing between image and text */
+        }
+
+        .ministry-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .footer-column {
+            margin: 10px 0;
+        }
+
+        .footer-social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social-icons a:hover {
+            color: #ffd700; /* Hover color for social icons */
+        }
+    </style>
+</head>
+<body class="ministries-page">
+    <header>
+        <div class="logo-container">
+            <img src="Screenshot (116).png" alt="Divine Life Restoration Centre" class="logo-image">
+            <h1>Divine Life Restoration Centre</h1>
+        </div>
+        <nav>
+            <div class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-bars"></i></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-submenu">
+                        <a href="#vision-mission">Who We Are <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="index.html#vision">Vision</a>
+                            <a href="index.html#mission">Mission</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="branches.html">Branches <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="branches.html">Queenstown</a>
+                            <a href="branches.html">Whittlesea</a>
+                            <a href="branches.html">Lady Frere</a>
+                            <a href="branches.html">Thornhill</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="events.html">Ministries <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="events.html#past-events">Men's Conference</a>
+                            <a href="events.html#past-events">uBuhke Benzwakazi</a>
+                            <a href="youth.html">Youth Fellowship</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="events.html">Events <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="past-events.html">Past Events</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="missions.html">Missions <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="#">uBuhle Benzwakazi</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="resources.html">Resources <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="sermons.html">Sermons</a>
+                            <a href="articles.html">Articles</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="messages.html">Messages <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-submenu-content">
+                            <a href="messages.html#latest-messages">Latest Messages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="give.html">Give</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="ministry-section">
+            <h2>Our Branches</h2>
+            <div class="ministry-content">
+                <div class="ministry">
+                    <div class="ministry-image">
+                        <img src="433946325_797700569044093_4710044368511543161_n.jpg" alt="Queenstown/Komani">
+                    </div>
+                    <div>
+                        <h3>Divine Life Restoration Centre Queenstown/Komani</h3>
+                        <p>This ministry serves the Queenstown/Komani community with love and support.</p>
+                        <p>Our branches are the heart of Divine Life Restoration Centre, each dedicated to serving their unique communities with love and compassion. From spiritual guidance to community outreach, each ministry aims to uplift and restore lives through faith-driven initiatives. We invite everyone to join us in our mission to spread hope and positivity, regardless of where you are.</p>
+                        <p>Bishop: Bishop Mngxaso</p>
+                    </div>
+                </div>
+                <div class="ministry">
+                    <div class="ministry-image">
+                        <img src="448890719_7695777833842808_4765377515134589284_n.jpg" alt="Whittlesea">
+                    </div>
+                    <div>
+                        <h3>Divine Life Restoration Centre Whittlesea</h3>
+                        <p>This ministry is dedicated to the Whittlesea community, offering spiritual guidance and support to those in need. Our congregation focuses on fostering a welcoming environment where everyone can explore their faith and find solace in challenging times.</p>
+                        <p>Under the leadership of Pastor Mdlangu and Lady Pastor Mdlangu, we engage in various community outreach programs, prayer meetings, and fellowship events that aim to uplift the spirit and strengthen bonds among members. Join us as we work together to make a positive impact in our community.</p>
+                        <p>Lady Pastor: Lady Pastor Mdlangu</p>
+                    </div>
+                </div>
+                <div class="ministry">
+                    <div class="ministry-image">
+                        <img src="449077788_7695778367176088_942017996853456141_n.jpg" alt="Cacadu/Lady Frere">
+                    </div>
+                    <div>
+                        <h3>Divine Life Restoration Centre Cacadu/Lady Frere</h3>
+                        <p>This ministry supports the Cacadu/Lady Frere area with various community initiatives aimed at improving the quality of life for residents. We focus on outreach programs that provide essential services, including food distribution, educational support, and health awareness campaigns.</p>
+                        <p>Guided by Lady Bishop Mngxaso, our dedicated team works tirelessly to empower individuals and families, fostering a sense of community and hope. We invite everyone to participate in our activities, whether through volunteering or joining us for worship, as we strive to bring positive change to our community.</p>
+                        <p>Lady Bishop: Lady Bishop Mngxaso</p>
+                    </div>
+                </div>
+                <div class="ministry">
+                    <div class="ministry-image">
+                        <img src="376275669_266698322898739_2230423858529694063_n.jpg" alt="Thornhill">
+                    </div>
+                    <div>
+                        <h3>Divine Life Restoration Centre Thornhill</h3>
+                        <p>This ministry serves the Thornhill community, fostering spiritual growth and unity among its members. We are committed to creating a nurturing environment where individuals can deepen their faith and build meaningful connections with one another.</p>
+                        <p>Led by Pastor Tsengiwe and Lady Pastor Tsengiwe, we offer a range of programs including Bible study groups, youth activities, and community service initiatives. Our goal is to encourage fellowship and support, helping each person find their purpose and place within the church and the wider community. Together, we aim to inspire hope and create a lasting impact in Thornhill.</p>
+                        <p>Pastor: Pastor Tsengiwe</p>
+                        <p>Lady Pastor: Lady Pastor Tsengiwe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: Divineliferestorationcentre@gmail.com</p>
+                <p>Phone: 071 764 8634</p>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/27680689634" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <p>&copy; 2024 Divine Life Restoration Centre | Designed by Lifa Gomomo.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,189 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(to right, #4B0082, #FFD700);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo-image img {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%; /* Added border-radius for rounded logo */
+    object-fit: cover; /* Ensures the logo covers the circular area */
+}
+
+.logo h1 {
+    font-family: 'Royal', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    font-size: 24px;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu li {
+    margin: 0 10px;
+}
+
+.main-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.main-menu li a:hover {
+    background: rgba(255, 215, 0, 0.3);
+    border-radius: 5px;
+}
+
+.about {
+    background: linear-gradient(to right, #FFD700, #4B0082);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.vision-mission {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.vision, .mission {
+    width: 45%;
+    background-color: #d6b5ee;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.vision i, .mission i {
+    font-size: 2em;
+    color: #4B0082;
+    margin-bottom: 10px;
+}
+
+.vision h3, .mission h3 {
+    font-size: 1.5em;
+    color: #4B0082;
+}
+
+.vision p, .mission p {
+    font-size: 1.1em;
+}
+.about {
+    background-image: url('OIP (1).jfif');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.about-item {
+    flex: 1 1 300px;
+    padding: 30px;
+    background-color: rgba(241, 229, 156, 0.8); /* Adjust background color with transparency */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.about-item:hover {
+    transform: translateY(-10px);
+}
+
+.about-item i {
+    font-size: 3rem;
+    color: #4B0082;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.about-item h3 {
+    font-size: 1.8rem;
+    color: #4B0082;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-item p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .about-item {
+        flex: 1 1 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
